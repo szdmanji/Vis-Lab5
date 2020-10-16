@@ -29,7 +29,7 @@ d3.csv('coffee-house-chains.csv', d3.autoType).then(data=> {
         .attr('width', xScale.bandwidth())
         .attr('height', d=>yScale(d.stores))
         .attr('x', d=>xScale(d.company))
-        .attr('y', 0)
+        .attr('y', d=>yScale(d))
         .attr('fill', 'steelblue')
     
     const xAxis = d3.axisBottom()
